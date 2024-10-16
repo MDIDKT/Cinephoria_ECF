@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f7ae7d5-da2c-4312-a684-400f0b5fd711" name="Changes" comment="test de mise en place de webpack">
-      <change afterPath="$PROJECT_DIR$/templates/_Partials/_hero.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/_Partials/_sectionFilms.html.twig" afterDir="false" />
+    <list default="true" id="3f7ae7d5-da2c-4312-a684-400f0b5fd711" name="Changes" comment="mise en forme de la la landing page avec navbar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FilmsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FilmsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/_Partials/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_Partials/_navbar.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -348,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729021240873</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="mise en forme de la la landing page avec navbar">
+      <option name="closed" value="true" />
+      <created>1729079370606</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1729079370606</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +374,24 @@
     <MESSAGE value="implementation de la page de reservation&#10;test manuel OK" />
     <MESSAGE value="Ajout de la page utilisateur" />
     <MESSAGE value="test de mise en place de webpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="test de mise en place de webpack" />
+    <MESSAGE value="mise en forme de la la landing page avec navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en forme de la la landing page avec navbar" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/_Partials/_navbar.html.twig</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/_Partials/_navbar.html.twig</url>
+          <line>49</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
