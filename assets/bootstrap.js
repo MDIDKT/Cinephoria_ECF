@@ -18,5 +18,3 @@ export default class extends Controller {
 
 import { startStimulusApp } from '@symfony/stimulus-bridge';
 
-// Start the Stimulus application
-startStimulusApp();

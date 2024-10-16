@@ -22,6 +22,21 @@ final class FilmsController extends AbstractController
         ]);
     }
 
+    #[Route(name: 'app_films_sectionFilms', methods: ['GET'])]
+    public function listeFilms(FilmsRepository $filmsRepository, $filmRepository): Response
+    {
+        // Récupérer tous les films depuis la base de données
+        $films = $filmRepository->findAll();
+
+        // Vérifie si la variable $films contient bien des données
+        if (!$films) {
+            throw $this->createNotFoundException('Aucun film trouvé.');
+        }
+        return $this->render('_Partials/_sectionFilms.html.twig', [
+            'films' => $filmsRepository->findAll(),
+        ]);
+    }
+
     #[Route('/new', name: 'app_films_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
