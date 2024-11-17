@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\ReservationsRepository;
+use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -43,12 +44,24 @@ class Reservations
     private ?User $user = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date = null;
+    private ?DateTimeInterface $date = null;
 
     public function __construct ()
     {
         $this->prixTotal = $this->getNombrePlaces () * 8;
         $this->sieges = new ArrayCollection();
+    }
+
+    public function getNombrePlaces (): ?int
+    {
+        return $this->nombrePlaces;
+    }
+
+    public function setNombrePlaces (int $nombrePlaces): static
+    {
+        $this->nombrePlaces = $nombrePlaces;
+
+        return $this;
     }
 
     public function getId (): ?int
@@ -67,31 +80,6 @@ class Reservations
 
         return $this;
     }
-
-    public function getSeances (): ?Seance
-    {
-        return $this->seances;
-    }
-
-    public function setSeances (?Seance $seances): static
-    {
-        $this->seances = $seances;
-
-        return $this;
-    }
-
-    public function getNombrePlaces (): ?int
-    {
-        return $this->nombrePlaces;
-    }
-
-    public function setNombrePlaces (int $nombrePlaces): static
-    {
-        $this->nombrePlaces = $nombrePlaces;
-
-        return $this;
-    }
-
 
     public function getPrixTotal (): ?float
     {
@@ -176,19 +164,17 @@ class Reservations
         return $this;
     }
 
-    public function getDate (): ?\DateTimeInterface
+    public function getDate (): ?DateTimeInterface
     {
         return $this->date;
     }
 
-    public function setDate (\DateTimeInterface $date): static
+    public function setDate (DateTimeInterface $date): static
     {
         $this->date = $date;
 
         return $this;
     }
-
-    // Ajoute cette méthode dans ton entité Reservation
 
     public function calculprixTotal (): float
     {
@@ -200,6 +186,20 @@ class Reservations
         }
 
         return $prixParPlace * $this->getNombrePlaces ();
+    }
+
+    public function getSeances (): ?Seance
+    {
+        return $this->seances;
+    }
+
+    // Ajoute cette méthode dans ton entité Reservation
+
+    public function setSeances (?Seance $seances): static
+    {
+        $this->seances = $seances;
+
+        return $this;
     }
 
 

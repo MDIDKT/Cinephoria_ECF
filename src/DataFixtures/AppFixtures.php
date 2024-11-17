@@ -2,12 +2,7 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Avis;
 use App\Entity\Cinemas;
-use App\Entity\Films;
-use App\Entity\Reservations;
-use App\Entity\Salles;
-use App\Entity\Seance;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;

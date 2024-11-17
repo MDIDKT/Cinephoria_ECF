@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\SeanceRepository;
+use DateTimeImmutable;
+use DateTimeInterface;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
@@ -17,7 +19,7 @@ class Seance
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?\DateTimeImmutable $HeureDebut = null;
+    private ?DateTimeImmutable $HeureDebut = null;
     /**
      * @var Collection<int, Reservations>
      */
@@ -28,7 +30,7 @@ class Seance
     private ?Films $films = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $heureFin = null;
+    private ?DateTimeInterface $heureFin = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $qualite = null;
@@ -47,26 +49,6 @@ class Seance
     public function getId (): ?int
     {
         return $this->id;
-    }
-
-    public function getHeureDebut (): ?\DateTimeImmutable
-    {
-        return $this->HeureDebut;
-    }
-
-    public function setHeureDebut (\DateTimeImmutable $HeureDebut): static
-    {
-        $this->HeureDebut = $HeureDebut;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Reservations>
-     */
-    public function getReservations (): Collection
-    {
-        return $this->reservations;
     }
 
     public function addReservation (Reservations $reservation): static
@@ -96,6 +78,18 @@ class Seance
         return $this->getHeureDebut ()->format ('H:i');
     }
 
+    public function getHeureDebut (): ?DateTimeImmutable
+    {
+        return $this->HeureDebut;
+    }
+
+    public function setHeureDebut (DateTimeImmutable $HeureDebut): static
+    {
+        $this->HeureDebut = $HeureDebut;
+
+        return $this;
+    }
+
     public function getFilms (): ?Films
     {
         return $this->films;
@@ -108,12 +102,12 @@ class Seance
         return $this;
     }
 
-    public function getHeureFin (): ?\DateTimeInterface
+    public function getHeureFin (): ?DateTimeInterface
     {
         return $this->heureFin;
     }
 
-    public function setHeureFin (?\DateTimeInterface $heureFin): static
+    public function setHeureFin (?DateTimeInterface $heureFin): static
     {
         $this->heureFin = $heureFin;
 
@@ -128,18 +122,6 @@ class Seance
     public function setQualite (?string $qualite): static
     {
         $this->qualite = $qualite;
-
-        return $this;
-    }
-
-    public function getSalle (): ?Salles
-    {
-        return $this->salle;
-    }
-
-    public function setSalle (?Salles $salle): static
-    {
-        $this->salle = $salle;
 
         return $this;
     }
@@ -162,5 +144,25 @@ class Seance
         $nombrePlacesTotales = $this->getSalle ()->getNombreSiege ();
 
         return $nombrePlacesTotales - $nombrePlacesReserves;
+    }
+
+    /**
+     * @return Collection<int, Reservations>
+     */
+    public function getReservations (): Collection
+    {
+        return $this->reservations;
+    }
+
+    public function getSalle (): ?Salles
+    {
+        return $this->salle;
+    }
+
+    public function setSalle (?Salles $salle): static
+    {
+        $this->salle = $salle;
+
+        return $this;
     }
 }

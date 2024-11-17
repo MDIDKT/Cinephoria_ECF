@@ -19,34 +19,34 @@ use Symfony\Component\Routing\Annotation\Route;
 class DashboardController extends AbstractDashboardController
 {
     #[Route('/admin', name: 'admin')]
-    public function index(): Response
+    public function index (): Response
     {
-        $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
+        $adminUrlGenerator = $this->container->get (AdminUrlGenerator::class);
 
-        return $this->redirect(
-            $adminUrlGenerator->setController(FilmsCrudController::class)->generateUrl()
+        return $this->redirect (
+            $adminUrlGenerator->setController (FilmsCrudController::class)->generateUrl ()
         );
     }
 
-    public function configureDashboard(): Dashboard
+    public function configureDashboard (): Dashboard
     {
-        return Dashboard::new()
-            ->setTitle('Administration du Cinéma');
+        return Dashboard::new ()
+            ->setTitle ('Administration du Cinéma');
     }
 
-    public function configureCrud(): Crud
+    public function configureCrud (): Crud
     {
-        return Crud::new()
-            ->showEntityActionsInlined();
+        return Crud::new ()
+            ->showEntityActionsInlined ();
     }
 
-    public function configureMenuItems(): iterable
+    public function configureMenuItems (): iterable
     {
-        yield MenuItem::linkToCrud('Cinémas', 'fas fa-building', Cinemas::class);
-        yield MenuItem::linkToCrud('Films', 'fas fa-film', Films::class);
-        yield MenuItem::linkToCrud('Séances', 'fas fa-calendar-alt', Seance::class);
-        yield MenuItem::linkToCrud('Salles', 'fas fa-chair', Salles::class);
-        yield MenuItem::linkToCrud('Réservations', 'fas fa-ticket-alt', Reservations::class);
-        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-users', User::class);
+        yield MenuItem::linkToCrud ('Cinémas', 'fas fa-building', Cinemas::class);
+        yield MenuItem::linkToCrud ('Films', 'fas fa-film', Films::class);
+        yield MenuItem::linkToCrud ('Séances', 'fas fa-calendar-alt', Seance::class);
+        yield MenuItem::linkToCrud ('Salles', 'fas fa-chair', Salles::class);
+        yield MenuItem::linkToCrud ('Réservations', 'fas fa-ticket-alt', Reservations::class);
+        yield MenuItem::linkToCrud ('Utilisateurs', 'fas fa-users', User::class);
     }
 }
