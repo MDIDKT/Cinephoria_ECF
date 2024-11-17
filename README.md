@@ -15,17 +15,22 @@ Instructions d'installation
    
  	 git clone https://github.com/MDIDKT/Cinephoria_ECF.git
   	
-3.	Accéder au répertoire du projet :
+2.	Accéder au répertoire du projet :
+   
   	cd Cinephoria_ECF
 
-5.	Installer les dépendances avec Composer :
+3.	Installer les dépendances avec Composer :
+   
   	composer Install
 
-6.	Configure l'environnement en copiant le fichier .env vers .env.local, puis en ajustant les paramètres, tels que le DSN pour la base de données et Mailtrap.
+4.	Configure l'environnement en copiant le fichier .env vers .env.local, puis en ajustant les paramètres, tels que le DSN pour la base de données et Mailtrap.
   
-7.	Exécuter les migrations pour configurer la base de données :
+5.	Exécuter les migrations pour configurer la base de données :
+   
   	php bin/console doctrine:migrations:migrate
-8.	Démarrer le serveur Symfony :
+  	
+6.	Démarrer le serveur Symfony :
+    
   symfony server:start -d
 
 Commandes supplémentaires :
