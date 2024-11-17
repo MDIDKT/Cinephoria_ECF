@@ -12,9 +12,11 @@ Prérequis :
 
 Instructions d'installation
 1.	Cloner le projet depuis GitHub :
- 	 git clone 
+   
+ 	 git clone https://github.com/MDIDKT/Cinephoria_ECF.git
+  	
 3.	Accéder au répertoire du projet :
-  	cd ton-projet
+  	cd Cinephoria_ECF
 
 5.	Installer les dépendances avec Composer :
   	composer Install
