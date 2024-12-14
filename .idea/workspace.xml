@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f7ae7d5-da2c-4312-a684-400f0b5fd711" name="Changes" comment="reformatage du code" />
+    <list default="true" id="3f7ae7d5-da2c-4312-a684-400f0b5fd711" name="Changes" comment="reformatage du code">
+      <change beforePath="$PROJECT_DIR$/.idea/Cinephoria_Admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Cinephoria_Admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,6 +284,7 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/ux-twig-component" />
     </include_path>
   </component>
   <component name="ProblemsViewState">
@@ -413,6 +418,7 @@
       <workItem from="1731738441207" duration="2708000" />
       <workItem from="1731859319414" duration="2209000" />
       <workItem from="1734169898520" duration="1139000" />
+      <workItem from="1734171053851" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="Creation du CRUD cineme, film, seance et salle.&#10;Corriger l'affichage de la colone Films et salles">
       <option name="closed" value="true" />
@@ -678,7 +684,31 @@
       <option name="project" value="LOCAL" />
       <updated>1734171009115</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="reformatage du code">
+      <option name="closed" value="true" />
+      <created>1734171077973</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1734171077973</updated>
+    </task>
+    <task id="LOCAL-00035" summary="reformatage du code">
+      <option name="closed" value="true" />
+      <created>1734171224715</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1734171224716</updated>
+    </task>
+    <task id="LOCAL-00036" summary="reformatage du code">
+      <option name="closed" value="true" />
+      <created>1734171246699</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1734171246699</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
